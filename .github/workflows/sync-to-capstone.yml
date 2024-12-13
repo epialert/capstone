@@ -42,13 +42,11 @@ jobs:
 
     - name: Copy relevant files to capstone repo
       run: |
-        echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+        echo "Copying files from the source repository..."
         if [ "$GITHUB_REPOSITORY" == "epialert/cloud-computing" ]; then
           cp -r ../cloud-computing/* ../capstone/CC/
         elif [ "$GITHUB_REPOSITORY" == "epialert/mobile-development" ]; then
           cp -r ../mobile-development/* ../capstone/MD/
-        else
-          echo "This workflow is not triggered from the expected repositories."
         fi
         
         echo "Listing files in CC folder after copy:"
