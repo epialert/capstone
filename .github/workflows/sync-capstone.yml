@@ -41,6 +41,7 @@ jobs:
         mkdir -p capstone/CC
         mkdir -p capstone/MD
         mkdir -p capstone/ML
+        ls -l machine/
 
     - name: Move relevant files to capstone repo
       run: |
