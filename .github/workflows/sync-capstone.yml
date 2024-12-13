@@ -1,12 +1,8 @@
 name: Sync to Capstone
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - '**/*'
-  workflow_dispatch: # Memungkinkan pemicu manual dari repositori lain
+  repository_dispatch:
+    types: [sync-capstone-repo]  # Event type yang dikirimkan dari repositori lain
 
 jobs:
   sync:
