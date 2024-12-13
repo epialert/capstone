@@ -20,11 +20,15 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
 
-    - name: Clone the Capstone repository
+    - name: Clone or pull Capstone repository
       run: |
-        git clone https://github.com/epialert/capstone.git ../capstone
-        cd ../capstone
-        git checkout master  # Ganti dengan branch yang sesuai jika perlu
+        # Jika repositori capstone sudah ada, kita pull update-nya
+        if [ ! -d "../capstone" ]; then
+          git clone https://github.com/epialert/capstone.git ../capstone
+        else
+          cd ../capstone
+          git pull origin master  # Ganti dengan branch yang sesuai jika perlu
+        fi
 
     - name: Clone the other repositories
       run: |
