@@ -34,22 +34,28 @@ jobs:
       run: |
         git clone https://github.com/epialert/cloud-computing.git cloud
         git clone https://github.com/epialert/mobile-development.git mobile
+        git clone https://github.com/epialert/machine-learning.git machine
 
     - name: Create target directories in Capstone repo (if not exist)
       run: |
         mkdir -p capstone/CC
         mkdir -p capstone/MD
+        mkdir -p capstone/ML
 
     - name: Move relevant files to capstone repo
       run: |
         echo "Moving files from the source repository..."
         rsync -av --remove-source-files cloud/ capstone/CC/
         rsync -av --remove-source-files mobile/ capstone/MD/
+        rsync -av --remove-source-files machine/ capstone/ML/
 
         echo "Listing files in CC folder after move:"
         ls -l capstone/CC/
         echo "Listing files in MD folder after move:"
         ls -l capstone/MD/
+        echo "Listing files in ML folder after move:"
+        ls -l capstone/ML/
+
 
     - name: Check git status
       run: |
@@ -59,7 +65,7 @@ jobs:
     - name: Add and commit changes
       run: |
         cd capstone
-        git add CC/* MD/* || echo "No files to add"
+        git add CC/* MD/* ML/* || echo "No files to add"
         git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
     - name: Commit and push changes to Capstone
