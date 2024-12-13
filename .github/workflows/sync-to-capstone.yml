@@ -53,7 +53,16 @@ jobs:
     - name: Add and commit changes
       run: |
         cd ../capstone
-        git add CC/* MD/* ML/*
+        # Debugging: Check if files exist
+        echo "Checking files in CC folder"
+        ls -l CC/
+        echo "Checking files in MD folder"
+        ls -l MD/
+        echo "Checking files in ML folder"
+        ls -l ML/
+        
+        # Add files explicitly
+        git add ../capstone/CC/* ../capstone/MD/* ../capstone/ML/* || echo "No files to add"
         git status  # Ensure changes are detected
         git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
