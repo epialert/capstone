@@ -2,73 +2,73 @@ name: Sync to Capstone
 
 on:
   repository_dispatch:
-    types: [sync-capstone-repo]  # Event type yang dikirimkan dari repositori lain
+    types: [sync-capstone-repo] # Event type yang dikirimkan dari repositori lain
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the source repository
-      uses: actions/checkout@v2
+      - name: Checkout the source repository
+        uses: actions/checkout@v2
 
-    - name: Set up Git for pushing changes
-      run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
+      - name: Set up Git for pushing changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
 
-    - name: Remove Capstone directory if it exists
-      run: |
-        if [ -d "./capstone" ]; then
-          rm -rf ./capstone
-          echo "Capstone directory removed."
-        fi
+      - name: Remove Capstone directory if it exists
+        run: |
+          if [ -d "./capstone" ]; then
+            rm -rf ./capstone
+            echo "Capstone directory removed."
+          fi
 
-    - name: Clone Capstone repository
-      run: |
-        mkdir -p capstone
-        git clone https://github.com/epialert/capstone.git capstone
-        ls -l capstone  # Untuk memverifikasi isi direktori
+      - name: Clone Capstone repository
+        run: |
+          mkdir -p capstone
+          git clone https://github.com/epialert/capstone.git capstone
+          ls -l capstone  # Untuk memverifikasi isi direktori
 
-    - name: Clone the other repositories
-      run: |
-        git clone https://github.com/epialert/cloud-computing.git cloud
-        git clone https://github.com/epialert/mobile-development.git mobile
-        git clone https://github.com/epialert/machine-learning.git machine
+      - name: Clone the other repositories
+        run: |
+          git clone https://github.com/epialert/cloud-computing.git cloud
+          git clone https://github.com/epialert/mobile-development.git mobile
+          git clone https://github.com/epialert/machine-learning.git machine
 
-    - name: Create target directories in Capstone repo (if not exist)
-      run: |
-        mkdir -p capstone/CC
-        mkdir -p capstone/MD
-        mkdir -p capstone/ML
+      - name: Create target directories in Capstone repo (if not exist)
+        run: |
+          mkdir -p capstone/CC
+          mkdir -p capstone/MD
+          mkdir -p capstone/ML
 
-    - name: Move relevant files to capstone repo
-      run: |
-        echo "Moving files from the source repository..."
-        rsync -av --remove-source-files cloud/ capstone/CC/
-        rsync -av --remove-source-files mobile/ capstone/MD/
-        rsync -av --remove-source-files machine/ capstone/ML/
+      - name: Move relevant files to capstone repo
+        run: |
+          echo "Moving files from the source repository..."
+          rsync -av --remove-source-files cloud/ capstone/CC/
+          rsync -av --remove-source-files mobile/ capstone/MD/
+          rsync -av --remove-source-files machine/ capstone/ML/
 
-        echo "Listing files in CC folder after move:"
-        ls -l capstone/CC/
-        echo "Listing files in MD folder after move:"
-        ls -l capstone/MD/
-        echo "Listing files in ML folder after move:"
-        ls -l capstone/ML/
+          echo "Listing files in CC folder after move:"
+          ls -l capstone/CC/
+          echo "Listing files in MD folder after move:"
+          ls -l capstone/MD/
+          echo "Listing files in ML folder after move:"
+          ls -l capstone/ML/
 
-    - name: Check git status
-      run: |
-        ls -l capstone/ML/
-        cd capstone
-        git status
+      - name: Check git status
+        run: |
+          ls -l capstone/ML/
+          cd capstone
+          git status
 
-    - name: Add and commit changes
-      run: |
-        cd capstone
-        git add CC/* MD/* ML/* || echo "No files to add"
-        git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
+      - name: Add and commit changes
+        run: |
+          cd capstone
+          git add CC/* MD/* ML/* || echo "No files to add"
+          git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
-    - name: Commit and push changes to Capstone
-      run: |
-        cd capstone
-        git push https://github-actions[bot]:${{ secrets.CAPSTONE_TOKEN }}@github.com/epialert/capstone.git master
+      - name: Commit and push changes to Capstone
+        run: |
+          cd capstone
+          git push https://github-actions[bot]:${{ secrets.CAPSTONE_TOKEN }}@github.com/epialert/capstone.git master
