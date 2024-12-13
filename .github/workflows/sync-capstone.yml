@@ -56,7 +56,6 @@ jobs:
         echo "Listing files in ML folder after move:"
         ls -l capstone/ML/
 
-
     - name: Check git status
       run: |
         ls -l capstone/ML/
