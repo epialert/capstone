@@ -56,10 +56,12 @@ jobs:
         echo "Listing files in ML folder after move:"
         ls -l capstone/ML/
 
-    - name: Submodule
+    - name: Delete .git
       run: |
         cd capstone
-        rm -rf .git/modules/
+        rm -rf CC/.git
+        rm -rf MD/.git
+        rm -rf ML/.git
 
     - name: Add and commit changes
       run: |
