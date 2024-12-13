@@ -1,4 +1,4 @@
-#EpiAlert
+# EpiAlert
 
 ## Tech Stack & Library
 - Android Studio
