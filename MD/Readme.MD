@@ -8,7 +8,6 @@
 - Retrofit
 - OkHttp3
 - Datastore Preferences
-- Coil
 - Coroutines
 - Material 3
 - TensorFlowlite
