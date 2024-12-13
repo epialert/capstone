@@ -21,34 +21,30 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
 
-    - name: Clone or pull Capstone repository
+    - name: Remove all and clone Capstone repository
       run: |
-        if [ ! -d "../capstone" ]; then
-          git clone https://github.com/epialert/capstone.git ../capstone
-        else
-          cd ../capstone
-          git pull origin master
-        fi
-
+        rm -rf *
+        git clone https://github.com/epialert/capstone.git ../capstone
+        
     - name: Clone the other repositories
       run: |
-        git clone https://github.com/epialert/cloud-computing.git ../cloud-computing
-        git clone https://github.com/epialert/mobile-development.git ../mobile-development
+        git clone https://github.com/epialert/cloud-computing.git ../cloud
+        git clone https://github.com/epialert/mobile-development.git ../mobile
 
     - name: Create target directories in Capstone repo (if not exist)
       run: |
         mkdir -p ../capstone/CC
         mkdir -p ../capstone/MD
 
-    - name: Copy relevant files to capstone repo
+    - name: Move relevant files to capstone repo
       run: |
-        echo "Copying files from the source repository..."
-        cp -r ../cloud-computing/* ../capstone/CC/
-        cp -r ../mobile-development/* ../capstone/MD/
+        echo "Moving files from the source repository..."
+        mv -r ../cloud/* ../capstone/CC/
+        mv -r ../mobile/* ../capstone/MD/
         
-        echo "Listing files in CC folder after copy:"
+        echo "Listing files in CC folder after move:"
         ls -l ../capstone/CC/
-        echo "Listing files in MD folder after copy:"
+        echo "Listing files in MD folder after move:"
         ls -l ../capstone/MD/
 
     - name: Check git status
