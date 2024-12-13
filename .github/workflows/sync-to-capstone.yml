@@ -47,9 +47,9 @@ jobs:
     - name: Move relevant files to capstone repo
       run: |
         echo "Moving files from the source repository..."
-        mv cloud/* capstone/CC/
-        mv mobile/* capstone/MD/
-        
+        rsync -av --remove-source-files cloud/ capstone/CC/
+        rsync -av --remove-source-files mobile/ capstone/MD/
+
         echo "Listing files in CC folder after move:"
         ls -l capstone/CC/
         echo "Listing files in MD folder after move:"
