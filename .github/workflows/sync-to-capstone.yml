@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - '**/*'
+  workflow_dispatch: # Memungkinkan pemicu manual dari repositori lain
 
 jobs:
   sync:
@@ -33,17 +34,12 @@ jobs:
       run: |
         git clone https://github.com/epialert/cloud-computing.git ../cloud-computing
         git clone https://github.com/epialert/mobile-development.git ../mobile-development
-    
-    - name: List files in cloud-computing
+
+    - name: Create target directories in Capstone repo (if not exist)
       run: |
-        echo "Listing files in cloud-computing:"
-        ls -l ../cloud-computing/
-    
-    - name: List files in mobile-development
-      run: |
-        echo "Listing files in mobile-development:"
-        ls -l ../mobile-development/
-    
+        mkdir -p ../capstone/CC
+        mkdir -p ../capstone/MD
+
     - name: Copy relevant files to capstone repo
       run: |
         echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
@@ -51,6 +47,8 @@ jobs:
           cp -r ../cloud-computing/* ../capstone/CC/
         elif [ "$GITHUB_REPOSITORY" == "epialert/mobile-development" ]; then
           cp -r ../mobile-development/* ../capstone/MD/
+        else
+          echo "This workflow is not triggered from the expected repositories."
         fi
         
         echo "Listing files in CC folder after copy:"
@@ -66,13 +64,7 @@ jobs:
     - name: Add and commit changes
       run: |
         cd ../capstone
-        echo "Checking files in CC folder before git add"
-        ls -l CC/
-        echo "Checking files in MD folder before git add"
-        ls -l MD/
-
         git add CC/* MD/* || echo "No files to add"
-        git status
         git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
     - name: Commit and push changes to Capstone
