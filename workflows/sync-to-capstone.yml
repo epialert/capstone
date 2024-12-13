@@ -1,0 +1,43 @@
+name: Sync to Capstone
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '**/*'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the source repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Git for pushing changes
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+    
+    - name: Clone the capstone repository
+      run: |
+        git clone https://github.com/epialert/capstone.git
+        cd capstone
+
+    - name: Copy relevant files to capstone repo
+      run: |
+        # Tentukan direktori tujuan berdasarkan repositori ini
+        if [ "$GITHUB_REPOSITORY" == "epialert/cloud-computing" ]; then
+          cp -r * ../capstone/CC/
+        elif [ "$GITHUB_REPOSITORY" == "epialert/mobile-development" ]; then
+          cp -r * ../capstone/MD/
+        elif [ "$GITHUB_REPOSITORY" == "epialert/machine-learning" ]; then
+          cp -r * ../capstone/ML/
+        fi
+    
+    - name: Commit and push changes to Capstone
+      run: |
+        cd ../capstone
+        git add .
+        git commit -m "Sync changes from $GITHUB_REPOSITORY"
+        git push origin master
