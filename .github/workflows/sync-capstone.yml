@@ -60,6 +60,7 @@ jobs:
         run: |
           ls -l capstone/ML/
           cd capstone
+          git diff
           git status
 
       - name: Add and commit changes
