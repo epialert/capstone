@@ -24,7 +24,7 @@ jobs:
     - name: Remove all directories
       run: |
         echo "Removing all directories..."
-        rm -rf ../*
+        rm -rf ../capstone
         echo "All directories removed."
 
     - name: Clone Capstone repository
