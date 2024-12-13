@@ -1,4 +1,4 @@
-# Cloud Computing API Documentation
+# API Documentation
 
 > API ini dirancang untuk mendukung backend proyek Capstone dalam program Bangkit. Proyek ini terintegrasi dengan MD, memungkinkan kolaborasi dan pertukaran data yang lebih baik antar komponen sistem. Dengan API ini, pengembang dapat mengakses dan mengelola fungsi yang diperlukan untuk menjalankan aplikasi dengan lancar.
 
