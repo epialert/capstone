@@ -65,4 +65,4 @@ jobs:
     - name: Commit and push changes to Capstone
       run: |
         cd capstone
-        git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/epialert/capstone.git master
+        git push https://github-actions[bot]:${{ secrets.CAPSTONE_TOKEN }}@github.com/epialert/capstone.git master
