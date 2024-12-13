@@ -23,8 +23,8 @@ jobs:
 
     - name: Remove Capstone directory if it exists
       run: |
-        if [ -d "../capstone" ]; then
-          rm -rf ../capstone
+        if [ -d "./capstone" ]; then
+          rm -rf ./capstone
           echo "Capstone directory removed."
         fi
 
@@ -32,42 +32,41 @@ jobs:
       run: |
         mkdir -p capstone
         git clone https://github.com/epialert/capstone.git capstone
-        ls -l capstone
+        ls -l capstone  # Untuk memverifikasi isi direktori
 
-        
     - name: Clone the other repositories
       run: |
-        git clone https://github.com/epialert/cloud-computing.git ../cloud
-        git clone https://github.com/epialert/mobile-development.git ../mobile
+        git clone https://github.com/epialert/cloud-computing.git cloud
+        git clone https://github.com/epialert/mobile-development.git mobile
 
     - name: Create target directories in Capstone repo (if not exist)
       run: |
-        mkdir -p ../capstone/CC
-        mkdir -p ../capstone/MD
+        mkdir -p capstone/CC
+        mkdir -p capstone/MD
 
     - name: Move relevant files to capstone repo
       run: |
         echo "Moving files from the source repository..."
-        mv ../cloud/* ../capstone/CC/
-        mv ../mobile/* ../capstone/MD/
+        mv cloud/* capstone/CC/
+        mv mobile/* capstone/MD/
         
         echo "Listing files in CC folder after move:"
-        ls -l ../capstone/CC/
+        ls -l capstone/CC/
         echo "Listing files in MD folder after move:"
-        ls -l ../capstone/MD/
+        ls -l capstone/MD/
 
     - name: Check git status
       run: |
-        cd ../capstone
+        cd capstone
         git status
 
     - name: Add and commit changes
       run: |
-        cd ../capstone
+        cd capstone
         git add CC/* MD/* || echo "No files to add"
         git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
     - name: Commit and push changes to Capstone
       run: |
-        cd ../capstone
+        cd capstone
         git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/epialert/capstone.git master
