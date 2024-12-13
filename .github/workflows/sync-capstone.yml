@@ -1,4 +1,4 @@
-name: Sync to Capstone
+name: Sync to folder
 
 on:
   repository_dispatch:
@@ -17,18 +17,18 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Remove Capstone directory if it exists
+      - name: Remove Folder directory if it exists
         run: |
-          if [ -d "./capstone" ]; then
-            rm -rf ./capstone
-            echo "Capstone directory removed."
+          if [ -d "./folder" ]; then
+            rm -rf ./folder
+            echo "folder directory removed."
           fi
 
-      - name: Clone Capstone repository
+      - name: Clone Folder repository
         run: |
-          mkdir -p capstone
-          git clone https://github.com/epialert/capstone.git capstone
-          ls -l capstone  # Untuk memverifikasi isi direktori
+          mkdir -p folder
+          git clone https://github.com/epialert/folder.git folder
+          ls -l folder  # Untuk memverifikasi isi direktori
 
       - name: Clone the other repositories
         run: |
@@ -36,38 +36,38 @@ jobs:
           git clone https://github.com/epialert/mobile-development.git mobile
           git clone https://github.com/epialert/machine-learning.git machine
 
-      - name: Create target directories in Capstone repo (if not exist)
+      - name: Create target directories in Folder repo (if not exist)
         run: |
-          mkdir -p capstone/CC
-          mkdir -p capstone/MD
-          mkdir -p capstone/ML
+          mkdir -p folder/CC
+          mkdir -p folder/MD
+          mkdir -p folder/ML
 
-      - name: Move relevant files to capstone repo
+      - name: Move relevant files to Folder repo
         run: |
           echo "Moving files from the source repository..."
-          rsync -av --remove-source-files cloud/ capstone/CC/
-          rsync -av --remove-source-files mobile/ capstone/MD/
-          rsync -av --remove-source-files machine/ capstone/ML/
+          rsync -av --remove-source-files cloud/ folder/CC/
+          rsync -av --remove-source-files mobile/ folder/MD/
+          rsync -av --remove-source-files machine/ folder/ML/
 
           echo "Listing files in CC folder after move:"
-          ls -l capstone/CC/
+          ls -l folder/CC/
           echo "Listing files in MD folder after move:"
-          ls -l capstone/MD/
+          ls -l folder/MD/
           echo "Listing files in ML folder after move:"
-          ls -l capstone/ML/
+          ls -l folder/ML/
 
       - name: Check git status
         run: |
-          cd capstone
+          cd folder
           git status
 
       - name: Add and commit changes
         run: |
-          cd capstone
+          cd folder
           git add CC/* MD/* ML/* || echo "No files to add"
           git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
-      - name: Commit and push changes to Capstone
+      - name: Commit and push changes to folder
         run: |
-          cd capstone
-          git push https://github-actions[bot]:${{ secrets.CAPSTONE_TOKEN }}@github.com/epialert/capstone.git master
+          cd folder
+          git push https://github-actions[bot]:${{ secrets.folder_TOKEN }}@github.com/epialert/folder.git master
