@@ -3,7 +3,7 @@ name: Sync to Capstone
 on:
   push:
     branches:
-      - master  # Ganti dengan branch utama dari repositori kamu
+      - master
     paths:
       - '**/*'
 
@@ -20,9 +20,17 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
 
-    - name: Add Capstone repository as remote
+    - name: Clone the Capstone repository
       run: |
-        git remote add capstone https://github.com/epialert/capstone.git
+        git clone https://github.com/epialert/capstone.git ../capstone
+        cd ../capstone
+        git checkout master  # Ganti dengan branch yang sesuai jika perlu
+
+    - name: Clone the other repositories
+      run: |
+        git clone https://github.com/epialert/cloud-computing.git ../cloud-computing
+        git clone https://github.com/epialert/mobile-development.git ../mobile-development
+        git clone https://github.com/epialert/machine-learning.git ../machine-learning
 
     - name: Create target directories in Capstone repo (if not exist)
       run: |
@@ -32,15 +40,16 @@ jobs:
 
     - name: Copy relevant files to capstone repo
       run: |
+        # Menyalin file ke masing-masing folder
         if [ "$GITHUB_REPOSITORY" == "epialert/cloud-computing" ]; then
-          cp -r * ../capstone/CC/
+          cp -r ../cloud-computing/* ../capstone/CC/
         elif [ "$GITHUB_REPOSITORY" == "epialert/mobile-development" ]; then
-          cp -r * ../capstone/MD/
+          cp -r ../mobile-development/* ../capstone/MD/
         elif [ "$GITHUB_REPOSITORY" == "epialert/machine-learning" ]; then
-          cp -r * ../capstone/ML/
+          cp -r ../machine-learning/* ../capstone/ML/
         fi
-
-        # Verifikasi salinan file
+        
+        # Verifikasi apakah file sudah berhasil disalin
         echo "Listing files in CC folder after copy:"
         ls -l ../capstone/CC/
         echo "Listing files in MD folder after copy:"
@@ -56,7 +65,7 @@ jobs:
     - name: Add and commit changes
       run: |
         cd ../capstone
-        # Debugging: Check if files exist in each folder
+        # Verifikasi konten folder sebelum ditambahkan
         echo "Checking files in CC folder before git add"
         ls -l CC/
         echo "Checking files in MD folder before git add"
@@ -64,9 +73,13 @@ jobs:
         echo "Checking files in ML folder before git add"
         ls -l ML/
 
-        # Menambahkan file secara eksplisit
-        git add ../capstone/CC/* ../capstone/MD/* ../capstone/ML/* || echo "No files to add"
-        git status  # Pastikan perubahan terdeteksi
+        # Menambahkan file secara eksplisit ke staging area
+        git add CC/* MD/* ML/* || echo "No files to add"
+        
+        # Verifikasi perubahan yang terdeteksi oleh git
+        git status
+        
+        # Jika ada perubahan, lakukan commit
         git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
     - name: Commit and push changes to Capstone
