@@ -41,7 +41,6 @@ jobs:
         mkdir -p capstone/CC
         mkdir -p capstone/MD
         mkdir -p capstone/ML
-        ls -l machine/
 
     - name: Move relevant files to capstone repo
       run: |
@@ -60,6 +59,7 @@ jobs:
 
     - name: Check git status
       run: |
+        ls -l capstone/ML/
         cd capstone
         git status
 
