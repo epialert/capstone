@@ -33,14 +33,20 @@ jobs:
       run: |
         git clone https://github.com/epialert/cloud-computing.git ../cloud-computing
         git clone https://github.com/epialert/mobile-development.git ../mobile-development
-        
-    - name: Create target directories in Capstone repo (if not exist)
+    
+    - name: List files in cloud-computing
       run: |
-        mkdir -p ../capstone/CC
-        mkdir -p ../capstone/MD
-        
+        echo "Listing files in cloud-computing:"
+        ls -l ../cloud-computing/
+    
+    - name: List files in mobile-development
+      run: |
+        echo "Listing files in mobile-development:"
+        ls -l ../mobile-development/
+    
     - name: Copy relevant files to capstone repo
       run: |
+        echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
         if [ "$GITHUB_REPOSITORY" == "epialert/cloud-computing" ]; then
           cp -r ../cloud-computing/* ../capstone/CC/
         elif [ "$GITHUB_REPOSITORY" == "epialert/mobile-development" ]; then
