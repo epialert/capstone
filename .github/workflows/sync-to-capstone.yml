@@ -19,11 +19,10 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
     
-    - name: Clone the capstone repository
+    - name: Add Capstone repository as remote
       run: |
-        git clone https://github.com/epialert/capstone.git
-        cd capstone
-
+        git remote add capstone https://github.com/epialert/capstone.git
+    
     - name: Copy relevant files to capstone repo
       run: |
         # Tentukan direktori tujuan berdasarkan repositori ini
@@ -40,4 +39,4 @@ jobs:
         cd ../capstone
         git add .
         git commit -m "Sync changes from $GITHUB_REPOSITORY"
-        git push origin master
+        git push https://github-actions[bot]:${{ secrets.CAPSTONE_TOKEN }}@github.com/epialert/capstone.git master
