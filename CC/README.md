@@ -1,6 +1,6 @@
 # Cloud Computing API Documentation
 
-> API ini dirancang khusus untuk mendukung backend dari proyek Capstone yang merupakan bagian dari program Bangkit. Proyek ini juga terintegrasi secara efektif dengan MD, sehingga memungkinkan kolaborasi dan pertukaran data yang lebih baik antara berbagai komponen sistem. Dengan menggunakan API ini, pengembang dapat mengakses dan mengelola berbagai fungsi yang diperlukan untuk menjalankan aplikasi dengan lancar.
+> API ini dirancang untuk mendukung backend proyek Capstone dalam program Bangkit. Proyek ini terintegrasi dengan MD, memungkinkan kolaborasi dan pertukaran data yang lebih baik antar komponen sistem. Dengan API ini, pengembang dapat mengakses dan mengelola fungsi yang diperlukan untuk menjalankan aplikasi dengan lancar.
 
 ## Base URL
 https://www.epialert.my.id
