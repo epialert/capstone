@@ -21,9 +21,13 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
 
-    - name: Remove all and clone Capstone repository
+    - name: Remove Capstone directory if it exists
       run: |
-        rm -rf *
+        rm -rf ../*
+        echo "Capstone directory removed."
+
+    - name: Clone Capstone repository
+      run: |
         git clone https://github.com/epialert/capstone.git ../capstone
         
     - name: Clone the other repositories
