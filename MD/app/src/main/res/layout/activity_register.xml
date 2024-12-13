@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.RegisterActivity">
+
+    <!-- ScrollView untuk konten utama -->
+    <ScrollView
+        android:id="@+id/r3b8rt1jx6p7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/epialert" />
+
+            <TextView
+                android:id="@+id/LoginTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="50dp"
+                android:text="@string/regist"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="42dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/se3e4e5sw1cr8bffffff"
+                android:orientation="vertical"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="18dp">
+
+                <com.dicoding.capstoneprojek.ui.customview.NameEditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="@string/input_name"
+                    android:inputType="textEmailAddress"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textColor="@color/editTextTextColor"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="42dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/se3e4e5sw1cr8bffffff"
+                android:orientation="vertical"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="18dp">
+
+                <com.dicoding.capstoneprojek.ui.customview.UserEditText
+                    android:id="@+id/edt_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="@string/input_username"
+                    android:inputType="textEmailAddress"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textColor="@color/editTextTextColor"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="42dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/se3e4e5sw1cr8bffffff"
+                android:orientation="vertical"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="18dp">
+
+                <com.dicoding.capstoneprojek.ui.customview.EmailEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="@string/input_email"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:inputType="textEmailAddress"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textColor="@color/editTextTextColor"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="42dp"
+                android:layout_marginBottom="95dp"
+                android:background="@drawable/se3e4e5sw1cr8bffffff"
+                android:orientation="vertical"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="18dp">
+
+                <com.dicoding.capstoneprojek.ui.customview.PasswordEditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="@string/input_password"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textColor="@color/editTextTextColor"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rxoejpwzcls"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:text="@string/attention"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="321dp"
+                android:layout_height="64dp"
+                android:layout_marginHorizontal="42dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="5dp"
+                android:alpha="1"
+                android:backgroundTint="@color/blue"
+                android:text="@string/register"
+                tools:alpha="100">
+            </Button>
+
+            <TextView
+                android:id="@+id/tvCreateAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:text="@string/have_account"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- ProgressBar yang terpusat di layar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
+</FrameLayout>

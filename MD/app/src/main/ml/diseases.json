@@ -1,0 +1,158 @@
+{
+  "penyakit": {
+    "squamous_cell_carcinoma": {
+      "id": "1",
+      "penjelasan": "Squamous cell carcinoma (SCC) adalah jenis kanker kulit yang berasal dari sel skuamosa, yaitu sel datar yang membentuk lapisan luar epidermis. SCC biasanya berkembang di area kulit yang sering terpapar sinar matahari, seperti wajah, leher, tangan, dan telinga, tetapi juga dapat terjadi di bagian tubuh lain, termasuk mukosa atau organ dalam. Gejalanya meliputi luka yang tidak sembuh, bercak merah bersisik, atau benjolan dengan permukaan kasar. Meskipun umumnya tumbuh lambat, SCC dapat menjadi invasif dan menyebar ke jaringan lain jika tidak ditangani. Pengobatan biasanya mencakup pembedahan, terapi radiasi, atau krioterapi, tergantung pada tingkat keparahan dan lokasi kanker.",
+      "pertanyaan": "(1: Gejala, 2: Penyebab, 3: Cara Pengobatan)",
+      "jawaban": [
+        {
+          "id": "1",
+          "kategori": "Gejala",
+          "text": "Gejala squamous cell carcinoma (SCC) meliputi munculnya benjolan keras, bercak merah bersisik, atau luka yang tidak sembuh-sembuh pada kulit, terutama di area yang sering terpapar sinar matahari seperti wajah, leher, tangan, dan lengan. Lesi tersebut dapat terasa nyeri, gatal, atau berdarah. Pada beberapa kasus, SCC muncul sebagai luka berkerak atau ulkus dengan tepi terangkat. Jika terjadi pada mukosa atau organ dalam, gejalanya bisa berupa kesulitan menelan, suara serak, atau rasa nyeri di area yang terdampak. Deteksi dini penting untuk mencegah penyebaran ke jaringan lain."
+        },
+        {
+          "id": "2",
+          "kategori": "Penyebab",
+          "text": "Squamous cell carcinoma (SCC) disebabkan oleh kerusakan DNA pada sel-sel skuamosa yang biasanya dipicu oleh paparan sinar ultraviolet (UV) dari matahari atau sumber buatan seperti tanning beds. Faktor risiko lainnya termasuk riwayat kulit terbakar, paparan bahan kimia seperti arsenik, sistem kekebalan tubuh yang lemah, atau infeksi virus human papillomavirus (HPV). Orang dengan kulit cerah, riwayat penyakit kulit tertentu, atau pernah terkena radiasi juga lebih rentan. Kerusakan DNA ini menyebabkan sel tumbuh tidak terkendali, membentuk tumor yang dapat menjadi invasif jika tidak diobati."
+        },
+        {
+          "id": "3",
+          "kategori": "Cara Pengobatan",
+          "text": "Pengobatan squamous cell carcinoma (SCC) tergantung pada ukuran, lokasi, dan tingkat keparahannya, tetapi umumnya melibatkan pengangkatan jaringan kanker. Prosedur seperti eksisi bedah, di mana tumor dipotong bersama sedikit jaringan sehat di sekitarnya, atau prosedur Mohs surgery, yang mengangkat lapisan kanker secara bertahap untuk meminimalkan kerusakan jaringan sehat, sering digunakan. Terapi radiasi dapat menjadi pilihan untuk kasus yang sulit dioperasi atau pada pasien dengan kondisi tertentu. Cryotherapy atau terapi pembekuan, serta penggunaan obat topikal seperti krim kemoterapi, efektif untuk kasus yang lebih ringan. Dalam kasus yang lebih parah atau jika kanker menyebar, terapi sistemik seperti kemoterapi atau imunoterapi mungkin diperlukan. Deteksi dini sangat penting untuk meningkatkan efektivitas pengobatan."
+        }
+      ]
+    },
+    "pigmented_benign_keratosis": {
+      "id": "2",
+      "penjelasan": "Pigmented benign keratosis adalah kondisi kulit jinak yang ditandai dengan pertumbuhan non-kanker berupa bercak atau plak berpigmen, sering kali cokelat hingga hitam, yang muncul di permukaan kulit. Lesi ini biasanya berkembang pada orang dewasa, terutama di area kulit yang terpapar sinar matahari, seperti wajah, lengan, atau punggung. Teksturnya dapat bervariasi dari halus hingga kasar, dan sering tampak seperti tertempel di kulit. Meskipun tidak berbahaya, pigmented benign keratosis dapat menyerupai kanker kulit seperti melanoma, sehingga penting untuk memastikan diagnosis melalui pemeriksaan medis. Pengobatan biasanya tidak diperlukan kecuali untuk alasan kosmetik atau jika lesi menjadi iritasi, dengan opsi seperti krioterapi atau pengangkatan bedah.",
+      "pertanyaan": "Apa yang ingin Anda ketahui tentang kurap? (1: Gejala, 2: Penyebab, 3: Cara Pengobatan)",
+      "jawaban": [
+        {
+          "id": "1",
+          "kategori": "Gejala",
+          "text": "Gejala pigmented benign keratosis meliputi munculnya bercak atau plak berpigmen di kulit, yang biasanya berwarna cokelat, abu-abu, hingga hitam, dengan tekstur yang dapat bervariasi dari halus hingga kasar. Lesi ini sering kali tampak menonjol atau seperti menempel di permukaan kulit dan cenderung tidak nyeri, meskipun bisa terasa gatal atau iritasi jika tergores. Ukurannya dapat kecil hingga besar, dan sering muncul di area yang sering terpapar sinar matahari, seperti wajah, dada, punggung, atau tangan. Meskipun jinak, lesi yang berubah bentuk, warna, atau tekstur perlu dievaluasi oleh dokter untuk menyingkirkan kemungkinan keganasan."
+        },
+        {
+          "id": "2",
+          "kategori": "Penyebab",
+          "text": "Pigmented benign keratosis disebabkan oleh proliferasi sel kulit yang berlebihan di lapisan epidermis, tetapi penyebab pastinya belum sepenuhnya dipahami. Faktor yang berkontribusi termasuk penuaan, paparan sinar ultraviolet (UV) dalam jangka panjang, dan predisposisi genetik. Kondisi ini lebih sering terjadi pada orang dengan kulit terang dan usia di atas 50 tahun. Meskipun tidak berbahaya, pertumbuhannya bisa dipicu oleh kerusakan akibat sinar matahari atau iritasi kulit kronis. Karena bisa menyerupai kanker kulit, lesi ini sering memerlukan pemeriksaan untuk memastikan diagnosis."
+        },
+        {
+          "id": "3",
+          "kategori": "Cara Pengobatan",
+          "text": "Pengobatan pigmented benign keratosis biasanya tidak diperlukan karena kondisinya jinak dan tidak berbahaya, kecuali jika lesi menyebabkan ketidaknyamanan, iritasi, atau alasan kosmetik. Beberapa metode pengobatan meliputi krioterapi, yaitu membekukan lesi dengan nitrogen cair untuk menghilangkannya, atau kuretase, di mana lesi dikikis setelah dilakukan pembekuan. Prosedur lain seperti eksisi bedah atau ablasi laser juga dapat digunakan untuk menghilangkan lesi dengan lebih presisi. Jika ada keraguan mengenai diagnosis atau jika lesi berubah bentuk, warna, atau ukuran, pemeriksaan lebih lanjut oleh dokter diperlukan untuk menyingkirkan kemungkinan kanker kulit."
+        }
+      ]
+    },
+    "basal_cell_carcinoma": {
+      "id": "3",
+      "penjelasan": "Basal cell carcinoma (BCC) adalah jenis kanker kulit yang paling umum dan berkembang di lapisan basal epidermis, yaitu lapisan terdalam dari kulit. BCC biasanya muncul di area yang sering terpapar sinar matahari, seperti wajah, leher, atau tangan, dan lebih sering terjadi pada orang dengan kulit terang. Lesinya cenderung tumbuh perlahan dan jarang menyebar ke bagian tubuh lain, tetapi jika tidak diobati, dapat merusak jaringan di sekitarnya. BCC sering terlihat sebagai benjolan kecil berwarna mutiara atau bercak merah yang tidak sembuh-sembuh. Pengobatan mencakup pembedahan, krioterapi, atau terapi topikal, tergantung pada ukuran dan lokasi lesi. Deteksi dini penting untuk mencegah komplikasi.",
+      "pertanyaan": "Apa yang ingin Anda ketahui tentang kurap? (1: Gejala, 2: Penyebab, 3: Cara Pengobatan)",
+      "jawaban": [
+        {
+          "id": "1",
+          "kategori": "Gejala",
+          "text": "Gejala Basal Cell Carcinoma (BCC) meliputi munculnya benjolan kecil berwarna mutiara atau daging dengan permukaan mengkilap, sering disertai pembuluh darah kecil yang terlihat di atasnya. Lesi juga bisa berupa bercak merah datar, luka yang tidak sembuh-sembuh, atau area kulit yang tampak seperti jaringan parut dengan tepi yang tidak rata. Kadang-kadang, BCC dapat menyebabkan luka yang mudah berdarah atau berkerak. Gejala ini biasanya muncul di area kulit yang sering terpapar sinar matahari, seperti wajah, leher, atau tangan, dan sering kali tidak disertai rasa sakit. Perubahan kulit yang mencurigakan sebaiknya diperiksa oleh dokter untuk diagnosis dini."
+        },
+        {
+          "id": "2",
+          "kategori": "Penyebab",
+          "text": "Basal Cell Carcinoma (BCC) disebabkan oleh kerusakan DNA pada sel basal di lapisan epidermis, yang umumnya dipicu oleh paparan sinar ultraviolet (UV) dari matahari atau sumber buatan seperti tanning beds. Faktor risiko utama termasuk paparan sinar matahari jangka panjang, terutama pada orang dengan kulit terang, serta riwayat terbakar sinar matahari yang sering. Selain itu, faktor genetik, seperti memiliki riwayat keluarga dengan BCC atau kelainan genetik tertentu seperti sindrom Gorlin, juga dapat meningkatkan risiko. BCC lebih sering terjadi pada orang yang lebih tua, tetapi dapat muncul pada usia muda, terutama pada individu yang sering terpapar sinar UV."
+        },
+        {
+          "id": "3",
+          "kategori": "Cara Pengobatan",
+          "text": "Pengobatan Basal Cell Carcinoma (BCC) tergantung pada ukuran, lokasi, dan tingkat keparahannya, namun umumnya melibatkan pengangkatan tumor melalui prosedur bedah. Eksisi bedah, di mana tumor dipotong bersama dengan sedikit jaringan sehat di sekitarnya, adalah metode yang paling sering digunakan. Pilihan lain termasuk **Mohs surgery**, yang mengangkat lapisan demi lapisan tumor dengan cara yang sangat presisi, serta krioterapi untuk membekukan dan menghilangkan lesi. Terapi topikal seperti krim imikimod atau 5-fluorouracil dapat digunakan untuk BCC yang lebih kecil atau datar. Dalam beberapa kasus, terapi radiasi atau terapi laser juga digunakan untuk mengatasi BCC yang sulit dioperasi atau berada di area sensitif. Deteksi dini dan pengobatan sangat penting untuk mencegah penyebaran lebih lanjut."
+        }
+      ]
+    },
+    "melanoma": {
+      "id": "4",
+      "penjelasan": "Melanoma adalah jenis kanker kulit yang berkembang pada sel pigmen kulit, yaitu melanosit, yang bertanggung jawab menghasilkan melanin (pigmen yang memberi warna pada kulit). Melanoma sering muncul sebagai tahi lalat baru atau perubahan pada tahi lalat yang sudah ada, dengan ciri-ciri berupa tepi tidak rata, warna yang tidak merata, dan ukuran yang lebih besar dari tahi lalat biasa. Melanoma dapat terjadi di area yang terpapar sinar matahari, tetapi juga dapat muncul di bagian tubuh yang tidak sering terpapar sinar matahari. Kanker ini cenderung lebih agresif dan dapat menyebar ke bagian tubuh lain jika tidak dideteksi dan diobati secara dini. Pengobatan biasanya melibatkan pembedahan untuk mengangkat tumor, dan dalam kasus yang lebih parah, terapi radiasi, kemoterapi, atau imunoterapi dapat digunakan. Deteksi dini sangat penting untuk meningkatkan peluang kesembuhan.",
+      "pertanyaan": "Apa yang ingin Anda ketahui tentang kurap? (1: Gejala, 2: Penyebab, 3: Cara Pengobatan)",
+      "jawaban": [
+        {
+          "id": "1",
+          "kategori": "Gejala",
+          "text": "Gejala melanoma biasanya melibatkan perubahan pada tahi lalat yang sudah ada atau munculnya tahi lalat baru yang mencurigakan. Tahi lalat yang terinfeksi melanoma sering memiliki ciri-ciri seperti bentuk tidak teratur, tepi yang bergerigi atau kabur, dan warna yang tidak merata (misalnya campuran warna hitam, cokelat, merah, atau biru). Ukurannya sering kali lebih besar dari 6 mm, dan dapat terasa gatal, berdarah, atau membengkak. Perubahan pada tahi lalat, seperti perubahan warna, tekstur, atau pendarahan, adalah tanda peringatan yang penting. Melanoma juga bisa muncul di area tubuh yang tidak sering terpapar sinar matahari, seperti telapak kaki atau kuku, dan jika dibiarkan berkembang, dapat menyebar ke bagian tubuh lain. Segera konsultasikan dengan dokter jika ada perubahan pada kulit yang mencurigakan."
+        },
+        {
+          "id": "2",
+          "kategori": "Penyebab",
+          "text": "Melanoma disebabkan oleh kerusakan DNA pada sel melanosit yang menghasilkan pigmen kulit, sering kali akibat paparan sinar ultraviolet (UV) dari matahari atau tanning beds. Paparan sinar UV yang berlebihan, terutama dari paparan matahari langsung atau sengatan matahari yang sering, meningkatkan risiko kerusakan kulit yang dapat memicu perkembangan melanoma. Faktor genetik juga memainkan peran penting, dengan individu yang memiliki riwayat keluarga melanoma atau kelainan genetik tertentu, seperti sindrom melanoma keluarga, lebih berisiko. Selain itu, memiliki kulit terang, banyak tahi lalat, atau riwayat terbakar matahari yang parah juga dapat meningkatkan kemungkinan terkena melanoma."
+        },
+        {
+          "id": "3",
+          "kategori": "Cara Pengobatan",
+          "text": "Pengobatan melanoma tergantung pada tahap dan lokasi kanker, dengan pendekatan utama adalah pembedahan untuk mengangkat tumor bersama jaringan sehat di sekitarnya. Pada kasus yang lebih lanjut, jika melanoma telah menyebar, terapi tambahan seperti **imunoterapi**, yang merangsang sistem kekebalan tubuh untuk melawan kanker, atau **kemoterapi** dan **terapi target** dapat digunakan untuk mengobati sel kanker yang lebih agresif. **Terapi radiasi** juga bisa digunakan untuk mengurangi ukuran tumor atau mengobati metastasis. Dalam beberapa kasus, **terapi kombinasi** yang mencakup beberapa pendekatan ini diterapkan untuk mengoptimalkan hasil. Deteksi dan pengobatan dini sangat penting untuk meningkatkan peluang kesembuhan pada melanoma."
+        }
+      ]
+    },
+    "seborrheic_keratosis": {
+      "id": "5",
+      "penjelasan": "Seborrheic keratosis adalah pertumbuhan kulit jinak yang umum, biasanya muncul sebagai benjolan atau plak berwarna cokelat, hitam, atau kuning dengan permukaan kasar atau berbentuk seperti kertas yang terlipat. Kondisi ini sering muncul pada orang yang lebih tua dan biasanya ditemukan di area yang terpapar sinar matahari, seperti wajah, dada, punggung, atau perut. Meskipun tidak berbahaya, seborrheic keratosis dapat tumbuh dalam ukuran dan jumlah, serta menyebabkan ketidaknyamanan jika tergores atau teriritasi. Penyebab pastinya belum sepenuhnya dipahami, tetapi faktor genetik dan penuaan memainkan peran penting dalam perkembangannya. Seborrheic keratosis tidak memerlukan pengobatan kecuali jika menimbulkan rasa tidak nyaman atau masalah kosmetik.",
+      "pertanyaan": "Apa yang ingin Anda ketahui tentang kurap? (1: Gejala, 2: Penyebab, 3: Cara Pengobatan)",
+      "jawaban": [
+        {
+          "id": "1",
+          "kategori": "Gejala",
+          "text": "Gejala seborrheic keratosis meliputi munculnya benjolan atau plak yang terasa kasar atau berkeriput di permukaan kulit, dengan warna yang bervariasi, mulai dari cokelat muda hingga hitam. Lesi ini sering kali memiliki permukaan yang berbintik-bintik atau seperti kertas yang terlipat, dan ukurannya bisa bervariasi, dari kecil hingga besar. Biasanya, seborrheic keratosis tidak menimbulkan rasa sakit, meskipun bisa terasa gatal atau teriritasi jika tergesek pakaian. Lesi ini sering ditemukan di area tubuh yang terpapar sinar matahari, seperti wajah, dada, atau punggung, dan biasanya berkembang perlahan seiring bertambahnya usia. Jika tumbuh atau berubah bentuk, sebaiknya diperiksakan untuk memastikan diagnosis."
+        },
+        {
+          "id": "2",
+          "kategori": "Penyebab",
+          "text": "Seborrheic keratosis disebabkan oleh pertumbuhan sel kulit yang berlebihan di lapisan atas epidermis, meskipun penyebab pastinya belum sepenuhnya dipahami. Faktor genetik diyakini memainkan peran utama, karena kondisi ini sering ditemukan pada keluarga dengan riwayat seborrheic keratosis. Selain itu, penuaan adalah faktor risiko utama, karena lesi ini lebih sering muncul seiring bertambahnya usia, terutama setelah usia 40 tahun. Paparan sinar ultraviolet (UV) dari matahari juga dapat memperburuk perkembangan seborrheic keratosis, meskipun tidak sepenuhnya menjadi penyebab utama. Kondisi ini tidak bersifat menular dan biasanya tidak terkait dengan kanker kulit."
+        },
+        {
+          "id": "3",
+          "kategori": "Cara Pengobatan",
+          "text": "Pengobatan **seborrheic keratosis** biasanya tidak diperlukan karena lesi ini jinak dan tidak berbahaya. Namun, jika lesi menimbulkan ketidaknyamanan, iritasi, atau masalah kosmetik, beberapa metode pengobatan dapat dilakukan. Salah satunya adalah **eksisi bedah**, di mana lesi diangkat dengan pisau bedah. Metode lain termasuk **krioterapi**, yaitu pembekuan lesi dengan nitrogen cair, dan **kuretase**, di mana lesi dikikis setelah diberi anestesi lokal. **Terapi laser** juga dapat digunakan untuk menghilangkan lesi dengan lebih presisi. Sebagian besar prosedur ini efektif untuk menghilangkan seborrheic keratosis, tetapi dalam beberapa kasus, lesi dapat muncul kembali."
+        }
+      ]
+    },
+    "nevus": {
+      "id": "6",
+      "penjelasan": "Nevus adalah istilah medis untuk tahi lalat atau bintik pigmen pada kulit yang terbentuk akibat kumpulan sel melanosit, yang menghasilkan pigmen melanin. Tahi lalat ini bisa muncul sejak lahir atau berkembang seiring waktu. Mereka biasanya berwarna cokelat atau hitam dan dapat berbentuk bulat atau oval, dengan ukuran yang bervariasi. Sebagian besar nevus bersifat jinak dan tidak berbahaya, tetapi beberapa dapat berubah menjadi kanker kulit, seperti melanoma, terutama jika mereka mengalami perubahan bentuk, ukuran, atau warna. Pemeriksaan rutin terhadap tahi lalat sangat penting untuk mendeteksi perubahan yang mungkin menandakan masalah kesehatan.",
+      "pertanyaan": "Apa yang ingin Anda ketahui tentang kurap? (1: Gejala, 2: Penyebab, 3: Cara Pengobatan)",
+      "jawaban": [
+        {
+          "id": "1",
+          "kategori": "Gejala",
+          "text": "Gejala nevus umumnya melibatkan munculnya tahi lalat atau bintik pigmen pada kulit yang berwarna cokelat, hitam, atau terkadang lebih terang, dengan bentuk bulat atau oval. Tahi lalat ini biasanya tidak menimbulkan rasa sakit, tetapi dapat terasa gatal atau teriritasi jika tergesek pakaian. Pada umumnya, nevus bersifat jinak dan tidak berubah, tetapi jika tahi lalat mulai berubah bentuk, ukuran, atau warna, atau jika tepinya menjadi tidak rata, berdarah, atau terasa nyeri, itu bisa menjadi tanda peringatan untuk kondisi yang lebih serius, seperti melanoma. Perubahan semacam ini perlu segera diperiksakan oleh dokter untuk memastikan diagnosis dan pengobatan yang tepat."
+        },
+        {
+          "id": "2",
+          "kategori": "Penyebab",
+          "text": "Nevus atau tahi lalat terjadi akibat pertumbuhan berlebih sel melanosit, yang memproduksi pigmen melanin, pada kulit. Penyebab pasti pembentukan nevus belum sepenuhnya dipahami, tetapi faktor genetik memainkan peran penting, karena kondisi ini sering muncul dalam keluarga. Paparan sinar ultraviolet (UV) dari matahari juga dapat memicu pembentukan tahi lalat, terutama pada orang yang sering terpapar sinar matahari atau memiliki kulit terang. Selain itu, faktor hormonal, seperti perubahan yang terjadi selama kehamilan atau masa remaja, dapat mempengaruhi perkembangan nevus. Meskipun kebanyakan nevus bersifat jinak, beberapa dapat berubah menjadi kanker kulit, terutama jika terpapar sinar UV secara berlebihan."
+        },
+        {
+          "id": "3",
+          "kategori": "Cara Pengobatan",
+          "text": "Pengobatan **nevus** biasanya tidak diperlukan karena kebanyakan tahi lalat bersifat jinak dan tidak menimbulkan masalah. Namun, jika nevus berubah bentuk, ukuran, atau warna, atau jika menyebabkan rasa tidak nyaman, maka pengobatan dapat dilakukan. Prosedur umum untuk menghilangkan nevus meliputi **eksisi bedah**, yaitu pengangkatan tahi lalat dengan pisau bedah setelah diberikan anestesi lokal. Metode lain termasuk **krioterapi**, di mana tahi lalat dibekukan dengan nitrogen cair, serta **kuretase**, yaitu pengikisan tahi lalat setelah diberi anestesi. **Terapi laser** juga dapat digunakan untuk menghilangkan nevus dengan lebih presisi. Penting untuk melakukan pemeriksaan medis sebelum pengobatan untuk memastikan bahwa tahi lalat tidak mengandung tanda-tanda kanker kulit."
+        }
+      ]
+    },
+    " ": {
+      "id": "7",
+      "penjelasan": "Actinic keratosis (AK) adalah kondisi kulit pra-kanker yang berkembang akibat paparan berlebihan terhadap sinar ultraviolet (UV), terutama pada area kulit yang sering terpapar matahari, seperti wajah, leher, tangan, dan lengan. Kondisi ini ditandai dengan munculnya bercak atau benjolan kasar, bersisik, dan berwarna merah muda, cokelat, atau abu-abu yang terasa kasar saat disentuh. Actinic keratosis umumnya terjadi pada orang yang berusia lebih dari 40 tahun, terutama mereka dengan kulit terang. Meskipun tidak selalu berkembang menjadi kanker, actinic keratosis berisiko berkembang menjadi **squamous cell carcinoma** jika tidak diobati, sehingga memerlukan perhatian medis untuk evaluasi dan pengobatan lebih lanjut.",
+      "pertanyaan": "Apa yang ingin Anda ketahui tentang kurap? (1: Gejala, 2: Penyebab, 3: Cara Pengobatan)",
+      "jawaban": [
+        {
+          "id": "1",
+          "kategori": "Gejala",
+          "text": "Gejala actinic keratosis meliputi munculnya bercak atau benjolan kecil yang kasar, bersisik, dan terasa kering pada kulit, sering kali berwarna merah muda, cokelat, atau abu-abu. Area yang terkena biasanya terasa kasar saat disentuh, seperti kulit yang tertutup lapisan kering. Lesi ini sering ditemukan di bagian tubuh yang terpapar sinar matahari, seperti wajah, telinga, leher, tangan, dan kulit kepala. Beberapa orang mungkin merasa gatal atau nyeri ringan pada area yang terkena, namun sering kali tidak menimbulkan gejala yang lebih parah. Jika dibiarkan, actinic keratosis dapat berkembang menjadi kanker kulit, sehingga penting untuk memeriksakan diri jika muncul tanda-tanda ini."
+        },
+        {
+          "id": "2",
+          "kategori": "Penyebab",
+          "text": "Actinic keratosis disebabkan oleh paparan jangka panjang terhadap sinar ultraviolet (UV) dari matahari atau sumber UV buatan, seperti lampu tanning. Sinar UV merusak DNA sel kulit, yang dapat mengarah pada perubahan pada sel-sel kulit dan memicu pembentukan lesi actinic keratosis. Faktor risiko lainnya termasuk usia lanjut, terutama pada orang yang berusia di atas 40 tahun, serta memiliki kulit terang yang lebih rentan terhadap kerusakan UV. Paparan sinar matahari yang intens atau berulang kali, baik dalam kehidupan sehari-hari maupun pada pekerjaan atau aktivitas luar ruangan, meningkatkan kemungkinan seseorang mengembangkan kondisi ini. Orang dengan riwayat keluarga yang memiliki actinic keratosis atau kanker kulit juga lebih berisiko."
+        },
+        {
+          "id": "3",
+          "kategori": "Cara Pengobatan",
+          "text": "Pengobatan actinic keratosis bertujuan untuk menghilangkan lesi sebelum berkembang menjadi kanker kulit. Beberapa metode pengobatan yang umum digunakan antara lain **krioterapi**, yaitu pembekuan lesi dengan nitrogen cair, serta **terapi topikal** menggunakan krim atau salep yang mengandung bahan aktif seperti fluorouracil atau imiquimod untuk mengurangi lesi. **Pengangkatan bedah** melalui eksisi atau kuretase juga bisa dilakukan untuk mengangkat lesi yang lebih besar atau sulit diobati. Metode lain termasuk **terapi fotodinamik**, di mana cahaya digunakan untuk mengaktifkan obat yang menghancurkan sel-sel abnormal. Pemantauan berkala penting untuk memastikan bahwa lesi tidak kembali atau berkembang menjadi kanker kulit."
+        }
+      ]
+    }
+  }
+}
