@@ -21,10 +21,11 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
 
-    - name: Remove Capstone directory if it exists
+    - name: Remove all directories
       run: |
+        echo "Removing all directories..."
         rm -rf ../*
-        echo "Capstone directory removed."
+        echo "All directories removed."
 
     - name: Clone Capstone repository
       run: |
@@ -43,8 +44,8 @@ jobs:
     - name: Move relevant files to capstone repo
       run: |
         echo "Moving files from the source repository..."
-        mv -r ../cloud/* ../capstone/CC/
-        mv -r ../mobile/* ../capstone/MD/
+        mv ../cloud/* ../capstone/CC/
+        mv ../mobile/* ../capstone/MD/
         
         echo "Listing files in CC folder after move:"
         ls -l ../capstone/CC/
