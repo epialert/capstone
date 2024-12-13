@@ -1,4 +1,4 @@
-name: Sync to folder
+name: Sync to Capstone
 
 on:
   repository_dispatch:
@@ -14,8 +14,8 @@ jobs:
 
       - name: Set up Git for pushing changes
         run: |
-          git config --global user.name "Affidev"
-          git config --global user.email "eabdalmufid@gmail.com"
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
 
       - name: Remove Folder directory if it exists
         run: |
@@ -27,7 +27,7 @@ jobs:
       - name: Clone Folder repository
         run: |
           mkdir -p folder
-          git clone https://github.com/epialert/folder.git folder
+          git clone https://github.com/epialert/capstone.git folder
           ls -l folder  # Untuk memverifikasi isi direktori
 
       - name: Clone the other repositories
@@ -36,7 +36,7 @@ jobs:
           git clone https://github.com/epialert/mobile-development.git mobile
           git clone https://github.com/epialert/machine-learning.git machine
 
-      - name: Create target directories in Folder repo (if not exist)
+      - name: Create target directories in folder repo (if not exist)
         run: |
           mkdir -p folder/CC
           mkdir -p folder/MD
