@@ -24,6 +24,12 @@ jobs:
       run: |
         git remote add capstone https://github.com/epialert/capstone.git
 
+    - name: Create target directories in Capstone repo (if not exist)
+      run: |
+        mkdir -p ../capstone/CC
+        mkdir -p ../capstone/MD
+        mkdir -p ../capstone/ML
+
     - name: Copy relevant files to capstone repo
       run: |
         if [ "$GITHUB_REPOSITORY" == "epialert/cloud-computing" ]; then
