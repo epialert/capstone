@@ -26,7 +26,7 @@ jobs:
           git clone https://github.com/epialert/capstone.git ../capstone
         else
           cd ../capstone
-          git pull origin master  # Ganti dengan branch yang sesuai jika perlu
+          git pull origin master
         fi
 
     - name: Clone the other repositories
@@ -47,7 +47,6 @@ jobs:
           cp -r ../mobile-development/* ../capstone/MD/
         fi
         
-        # Verifikasi apakah file sudah berhasil disalin
         echo "Listing files in CC folder after copy:"
         ls -l ../capstone/CC/
         echo "Listing files in MD folder after copy:"
@@ -61,19 +60,13 @@ jobs:
     - name: Add and commit changes
       run: |
         cd ../capstone
-        # Verifikasi konten folder sebelum ditambahkan
         echo "Checking files in CC folder before git add"
         ls -l CC/
         echo "Checking files in MD folder before git add"
         ls -l MD/
 
-        # Menambahkan file secara eksplisit ke staging area
         git add CC/* MD/* || echo "No files to add"
-        
-        # Verifikasi perubahan yang terdeteksi oleh git
         git status
-        
-        # Jika ada perubahan, lakukan commit
         git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
     - name: Commit and push changes to Capstone
