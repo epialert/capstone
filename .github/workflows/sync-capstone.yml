@@ -56,12 +56,15 @@ jobs:
         echo "Listing files in ML folder after move:"
         ls -l capstone/ML/
 
-    - name: Delete .git*
+    - name: Delete .git and .github
       run: |
         cd capstone
-        rm -rf CC/.git*
-        rm -rf MD/.git*
-        rm -rf ML/.git*
+        rm -rf CC/.git
+        rm -rf CC/.github
+        rm -rf MD/.git
+        rm -rf MD/.github
+        rm -rf ML/.git
+        rm -rf ML/.github
 
     - name: Add and commit changes
       run: |
