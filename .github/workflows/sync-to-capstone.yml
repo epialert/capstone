@@ -22,7 +22,6 @@ jobs:
 
     - name: Clone or pull Capstone repository
       run: |
-        # Jika repositori capstone sudah ada, kita pull update-nya
         if [ ! -d "../capstone" ]; then
           git clone https://github.com/epialert/capstone.git ../capstone
         else
@@ -44,7 +43,6 @@ jobs:
 
     - name: Copy relevant files to capstone repo
       run: |
-        # Menyalin file ke masing-masing folder
         if [ "$GITHUB_REPOSITORY" == "epialert/cloud-computing" ]; then
           cp -r ../cloud-computing/* ../capstone/CC/
         elif [ "$GITHUB_REPOSITORY" == "epialert/mobile-development" ]; then
