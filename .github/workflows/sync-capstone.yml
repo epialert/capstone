@@ -56,11 +56,6 @@ jobs:
         echo "Listing files in ML folder after move:"
         ls -l capstone/ML/
 
-    - name: Delete submodul
-      run: |
-        cd capstone
-        git rm --cached ML
-
     - name: Add and commit changes
       run: |
         cd capstone
