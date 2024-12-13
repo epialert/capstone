@@ -33,22 +33,18 @@ jobs:
       run: |
         git clone https://github.com/epialert/cloud-computing.git ../cloud-computing
         git clone https://github.com/epialert/mobile-development.git ../mobile-development
-        git clone https://github.com/epialert/machine-learning.git ../machine-learning
-
+        
     - name: Create target directories in Capstone repo (if not exist)
       run: |
         mkdir -p ../capstone/CC
         mkdir -p ../capstone/MD
-        mkdir -p ../capstone/ML
-
+        
     - name: Copy relevant files to capstone repo
       run: |
         if [ "$GITHUB_REPOSITORY" == "epialert/cloud-computing" ]; then
           cp -r ../cloud-computing/* ../capstone/CC/
         elif [ "$GITHUB_REPOSITORY" == "epialert/mobile-development" ]; then
           cp -r ../mobile-development/* ../capstone/MD/
-        elif [ "$GITHUB_REPOSITORY" == "epialert/machine-learning" ]; then
-          cp -r ../machine-learning/* ../capstone/ML/
         fi
         
         # Verifikasi apakah file sudah berhasil disalin
@@ -56,8 +52,6 @@ jobs:
         ls -l ../capstone/CC/
         echo "Listing files in MD folder after copy:"
         ls -l ../capstone/MD/
-        echo "Listing files in ML folder after copy:"
-        ls -l ../capstone/ML/
 
     - name: Check git status
       run: |
@@ -72,11 +66,9 @@ jobs:
         ls -l CC/
         echo "Checking files in MD folder before git add"
         ls -l MD/
-        echo "Checking files in ML folder before git add"
-        ls -l ML/
 
         # Menambahkan file secara eksplisit ke staging area
-        git add CC/* MD/* ML/* || echo "No files to add"
+        git add CC/* MD/* || echo "No files to add"
         
         # Verifikasi perubahan yang terdeteksi oleh git
         git status
