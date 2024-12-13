@@ -32,3 +32,5 @@
 - Use image from gallery with Gallery Intent
 - Automatic Login with Datastore Preferences
 - ChatBot
+- Analyze Skin
+- Cropping Image from gallery or camera intent
