@@ -64,10 +64,10 @@ jobs:
       - name: Add and commit changes
         run: |
           cd folder
-          git add CC/* MD/* ML/* || echo "No files to add"
+          git add . || echo "No files to add"
           git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
       - name: Commit and push changes to folder
         run: |
           cd folder
-          git push https://github-actions[bot]:${{ secrets.folder_TOKEN }}@github.com/epialert/folder.git master
+          git push https://github-actions[bot]:${{ secrets.folder_TOKEN }}@github.com/epialert/capstone.git master
