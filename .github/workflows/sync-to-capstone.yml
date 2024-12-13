@@ -39,10 +39,13 @@ jobs:
         elif [ "$GITHUB_REPOSITORY" == "epialert/machine-learning" ]; then
           cp -r * ../capstone/ML/
         fi
-        # Verify that files were copied successfully
-        echo "Listing files in the target directory:"
+
+        # Verifikasi salinan file
+        echo "Listing files in CC folder after copy:"
         ls -l ../capstone/CC/
+        echo "Listing files in MD folder after copy:"
         ls -l ../capstone/MD/
+        echo "Listing files in ML folder after copy:"
         ls -l ../capstone/ML/
 
     - name: Check git status
@@ -53,17 +56,17 @@ jobs:
     - name: Add and commit changes
       run: |
         cd ../capstone
-        # Debugging: Check if files exist
-        echo "Checking files in CC folder"
+        # Debugging: Check if files exist in each folder
+        echo "Checking files in CC folder before git add"
         ls -l CC/
-        echo "Checking files in MD folder"
+        echo "Checking files in MD folder before git add"
         ls -l MD/
-        echo "Checking files in ML folder"
+        echo "Checking files in ML folder before git add"
         ls -l ML/
 
-        # Add files explicitly
+        # Menambahkan file secara eksplisit
         git add ../capstone/CC/* ../capstone/MD/* ../capstone/ML/* || echo "No files to add"
-        git status  # Ensure changes are detected
+        git status  # Pastikan perubahan terdeteksi
         git commit -m "Sync changes from $GITHUB_REPOSITORY" || echo "No changes to commit"
 
     - name: Commit and push changes to Capstone
