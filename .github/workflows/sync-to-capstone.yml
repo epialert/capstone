@@ -30,8 +30,10 @@ jobs:
 
     - name: Clone Capstone repository
       run: |
-        git clone https://github.com/epialert/capstone.git ../capstone
-        ls -l ../capstone  # Untuk memverifikasi isi direktori
+        mkdir -p capstone
+        git clone https://github.com/epialert/capstone.git capstone
+        ls -l capstone
+
         
     - name: Clone the other repositories
       run: |
